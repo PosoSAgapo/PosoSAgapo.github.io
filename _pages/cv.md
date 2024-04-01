@@ -1,64 +1,41 @@
 ---
 layout: archive
-title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
+## Education
 
-{% include base_path %}
+* Ph.D in Computer Science, The Unviersity of Tokyo, 2026 (expected)
+* M.S. in Cyberspace Security, Harbin Institute of Technology, 2022
+* B.S. in Information Countermeasure, Harbin Institute of Technology , 2020
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Work experience
+* Spring 2024: Research Assistant
+  * National Institute of Informatics
+  * Duties included: Large Language Model Evaluation
+  * Supervisor: Yusuke Miyao
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Summer 2023: CyberAgent AI Lab NLP Group
+  * Topic: Large-Scale Deduplication
+  * Supervisor: Sho Hoshino
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Winter 2022: Research Assistant
+  * Hongkong University of Science and Technology
+  * Duties included: Recommendation System Develop
+  * Supervisor: Kim 
   
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Skills
+* TOEFL 105
+* JLPT N2
+* Some basic level German
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+## Awards 
+* Graduted with Honor, Harbin Institute of Technology, 2020
+* Two-time Recipient of First-Class Academic Scholarship, 2021, 2022
+* Nakashima Masanori Scholarship, 2024
+
+
   
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
