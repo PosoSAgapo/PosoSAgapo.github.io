@@ -7,7 +7,7 @@ redirect_from:
 ---
 ## Education
 
-* Ph.D in Computer Science, The Unviersity of Tokyo, 2026 (expected)
+* P.h.D in Computer Science, The Unviersity of Tokyo, 2026 (expected)
 * M.S. in Cyberspace Security, Harbin Institute of Technology, 2022
 * B.S. in Information Countermeasure, Harbin Institute of Technology , 2020
 
