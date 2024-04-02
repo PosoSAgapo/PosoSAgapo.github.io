@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 1. CogBERT: Cognition-guided pre-trained language models  
-**Xiao Ding**, **Bowen Chen**, Li Du, Bing Qin, Ting Liu at Coling 2022 (co-first with my supervisor)    
+**Xiao Ding**, **Bowen Chen**, Li Du, Bing Qin, Ting Liu at Coling 2022 (co-first with my supervisor Prof.Xiao Ding)    
 2. Mitigating Reporting Bias in Semi-supervised Temporal Commonsense Inference with Probabilistic Soft Logic  
 Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022  
 3. Syntactic and Semantic Uniformity for Semantic Parsing and Task-Oriented Dialogue Systems  
