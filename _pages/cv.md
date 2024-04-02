@@ -24,7 +24,7 @@ redirect_from:
 * Winter 2022: Research Assistant
   * Hongkong University of Science and Technology
   * Duties included: Recommendation System Develop
-  * Supervisor: Kim 
+  * Supervisor: Sung Hun KIM  
   
 ## Skills
 * TOEFL 105
