@@ -9,7 +9,7 @@ redirect_from:
 
 
 
-I am a PhD stucent at The Universityof Tokyo, Department of Coomputer Science, [Miyao Lab](https://mynlp.is.s.u-tokyo.ac.jp/ja/index).  
+I am a PhD stucent at The Universityof Tokyo, Department of Computer Science, [Miyao Lab](https://mynlp.is.s.u-tokyo.ac.jp/ja/index).  
 
 I also work as a intern in the [CyberAgent AI Lab](https://cyberagent.ai/ailab/) at NLP Group and also affliated with the Evaluation Group at LLM-jp group where I will work as a Research Assistant where we evaluate how pre-training, fine-tuning affects the model and how to systematically evaluate the ability of model rather than performance.  
   
