@@ -23,7 +23,7 @@ Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛�
 9. A Multi-Perspective Analysis of Memorization in Large Language Models  
 **Bowen Chen**, Namgi Han, Yusuke Miyao at ARR
 10. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
-LLM-jp Group: I was responsible for the construction of evaluation tools and the investigation of the data contamination problem.
+**LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination problem.
 
 
 
