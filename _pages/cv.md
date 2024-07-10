@@ -5,16 +5,16 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-## Education
-
-* P.h.D in Computer Science, The Unviersity of Tokyo, 2026 (expected)
-* M.S. in Cyberspace Security, Harbin Institute of Technology, 2022
-* B.S. in Information Countermeasure, Harbin Institute of Technology , 2020
 
 ## Work experience
 * Spring 2024: Research Assistant
   * National Institute of Informatics
   * Duties included: Large Language Model Evaluation
+  * Supervisor: Yusuke Miyao
+
+* Spring 2023-2024: Research Assistant 
+  * RIKEN
+  * Topic: Dialogue System
   * Supervisor: Yusuke Miyao
 
 * Summer 2023: CyberAgent AI Lab NLP Group
