@@ -32,7 +32,7 @@ redirect_from:
 * Some basic level German
 
 ## Awards 
-* Graduted with Honor, Harbin Institute of Technology, 2020 (Ranking First out of the whole EE School)
+* Graduted with Honored Bachelor, 2020 (Ranking First out of the whole EE School)
 * Two-time Recipient of First-Class Academic Scholarship, 2021, 2022
 * Nakashima Masanori Scholarship, 2024
 
