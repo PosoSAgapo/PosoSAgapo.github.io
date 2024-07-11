@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 ## Work experience
-* Spring 2024: Research Assistant
+* Spring 2024: Research Assistant (Internship)
   * National Institute of Informatics
   * Duties included: Large Language Model Evaluation
   * Supervisor: Yusuke Miyao

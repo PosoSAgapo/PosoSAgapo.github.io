@@ -13,7 +13,8 @@ I am a PhD stucent at The Universityof Tokyo, Department of Computer Science, [M
 
 I also work as a intern in the [CyberAgent AI Lab](https://cyberagent.ai/ailab/) at NLP Group and also affliated with the Evaluation Group at LLM-jp group where I work as a Research Assistant and mainly evaluate how pre-training, fine-tuning affects the model and how to systematically evaluate the ability of model rather than performance.  
   
-My research interests are in the field of Natural Language Processing, Machine Learning, and Deep Learning. Mainly in the analysis and evaluation of large language models and understand their abilities through various tools. Previously, I have also worked in the Cognition-Inspired NLP method, Temporal Commonsense Reasoning and Representation Learning, etc. 
+My research interests are in the field of Natural Language Processing, Machine Learning, and Deep Learning. Mainly in the analysis and evaluation of large language models and understand their abilities through various tools. Previously, I have also worked in the Cognition-Inspired NLP method, Temporal Commonsense Reasoning and Representation Learning, etc.
+Feel free to drop me a e-mail if you are interested in topics like LLM Evaluation and interpretability.
 
 
 My Background
@@ -25,5 +26,4 @@ My Interests
 ------
 Besides my research, my interest is gaming, especially JRPG games. I am currently palying Persona 5, Persona 3 and Octopath Traveller 2.    
 I also like watching anime and reading manga. I also travel from time to time when I have free time.  
-Feel free to drop me a e-mail if you are interested in my research.
 
