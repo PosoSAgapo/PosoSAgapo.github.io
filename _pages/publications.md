@@ -16,13 +16,11 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 **Bowen Chen**, Rune Sætre, Yusuke Miyao at EACL Findings 2024  
 6. RIAND: Robustness-Improved and Accelerated Nerual Deduplication  
 **Bowen Chen**, Sho Hoshino, Masato Mita, Peinan Zhang under ARR
-7. Commonsense-Enhanced Event Representation  
-**Bowen Chen**, Xiao Ding, Kuo Liao, Qing Bing, Ting Liu under review at Transaction on Cybernetics (Journal) 
-8. llm-jp-eval: 日本語大規模言語モデルの自動評価ツール  
-Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛一, 児玉 貴志, 菅原 朔, **Bowen Chen**, 松田 寛, 宮尾 祐介, 村脇 有吾, 劉 弘毅 (Namgi Han以外は五十音順です. Besides the Namgi Han, all the authors are in alphabetical order) at 言語処理学会2024
-9. A Multi-Perspective Analysis of Memorization in Large Language Models  
-**Bowen Chen**, Namgi Han, Yusuke Miyao at ARR
-10. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
+7. llm-jp-eval: 日本語大規模言語モデルの自動評価ツール  
+Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛一, 児玉 貴志, 菅原 朔, **Bowen Chen**, 松田 寛, 宮尾 祐介, 村脇 有吾, 劉 弘毅 (authors in alphabetical order) at 言語処理学会2024
+8. A Multi-Perspective Analysis of Memorization in Large Language Models  
+**Bowen Chen**, Namgi Han, Yusuke Miyao at ARR 
+9. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination problem.
 
 
