@@ -9,7 +9,7 @@ redirect_from:
 ## Work experience
 * Spring 2024: Research Assistant (Internship)
   * National Institute of Informatics
-  * Duties included: Large Language Model Evaluation
+  * Topic: Large Language Model Evaluation
   * Supervisor: Yusuke Miyao
 
 * Spring 2023-2024: Research Assistant 
@@ -23,7 +23,7 @@ redirect_from:
 
 * Winter 2022: Research Assistant
   * Hongkong University of Science and Technology
-  * Duties included: Recommendation System Develop
+  * Topic: Recommendation System Develop
   * Supervisor: Sung Hun KIM  
   
 ## Skills
@@ -32,7 +32,7 @@ redirect_from:
 * Some basic level German
 
 ## Awards 
-* Graduted with Honored Bachelor, 2020 (Ranking First out of the whole EE School)
+* Graduted with Honor, 2020 (Ranking First out of the whole EE School)
 * Two-time Recipient of First-Class Academic Scholarship, 2021, 2022
 * Nakashima Masanori Scholarship, 2024
 
