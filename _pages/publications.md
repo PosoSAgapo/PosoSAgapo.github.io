@@ -19,9 +19,11 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 7. llm-jp-eval: 日本語大規模言語モデルの自動評価ツール  
 Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛一, 児玉 貴志, 菅原 朔, **Bowen Chen**, 松田 寛, 宮尾 祐介, 村脇 有吾, 劉 弘毅 (authors in alphabetical order) at 言語処理学会2024
 8. A Multi-Perspective Analysis of Memorization in Large Language Models  
-**Bowen Chen**, Namgi Han, Yusuke Miyao at ARR 
+**Bowen Chen**, Namgi Han, Yusuke Miyao at EMNLP Main Conference 2024
 9. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination problem.
+10. Revisiting the Memeber Inference Attack on Large Language Models
+
 
 
 
