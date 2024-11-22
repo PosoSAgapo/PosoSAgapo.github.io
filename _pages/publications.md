@@ -22,7 +22,8 @@ Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛�
 **Bowen Chen**, Namgi Han, Yusuke Miyao at EMNLP Main Conference 2024
 9. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination problem.
-10. Revisiting the Memeber Inference Attack on Large Language Models
+10. A Statistical Revisiting the Memeber Inference Attack on Large Language Models
+**Bowen Chen**, Namgi Han, Yusuke Miyao
 
 
 
