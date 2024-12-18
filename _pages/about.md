@@ -9,10 +9,9 @@ redirect_from:
 
 
 
-I am a PhD stucent at The Universityof Tokyo, Department of Computer Science, [Miyao Lab](https://mynlp.is.s.u-tokyo.ac.jp/ja/index).  
+I am a PhD stucent at the University of Tokyo, Department of Computer Science, [Miyao Lab](https://mynlp.is.s.u-tokyo.ac.jp/ja/index).  
  
-My research interests are in the field of Natural Language Processing, Machine Learning, and Deep Learning. Mainly in the analysis and evaluation of large language models and understand their abilities through various tools. Previously, I have also worked in the Cognition-Inspired NLP method, Temporal Commonsense Reasoning and Representation Learning, etc.
-Feel free to drop me a e-mail if you are interested in topics like LLM Evaluation and interpretability.
+My research interests are in the field of Natural Language Processing, Machine Learning, and Deep Learning. The main focus of my research it LLM security, analysis and its interpretability. Previously, I also had some experience in Semantic Parsing and Cognitive Science X NLP. 
 
 
 My Background

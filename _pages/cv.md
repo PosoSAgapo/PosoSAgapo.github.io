@@ -7,14 +7,14 @@ redirect_from:
 ---
 
 ## Work experience
-* Spring 2024: Research Assistant (Internship)
+* Winter 2024: Internship 
+  * Sony AI DSAI
+  * Topic: Large Language Model Agent Research
+  * Supervisor: Zhao Wang (Joe)
+
+* Spring 2024: Research Assistant 
   * National Institute of Informatics
   * Topic: Large Language Model Evaluation
-  * Supervisor: Yusuke Miyao
-
-* Spring 2023-2024: Research Assistant 
-  * RIKEN
-  * Topic: Dialogue System
   * Supervisor: Yusuke Miyao
 
 * Summer 2023: CyberAgent AI Lab NLP Group
