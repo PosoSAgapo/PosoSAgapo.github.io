@@ -21,7 +21,7 @@ I also like watching anime and reading manga. I also travel from time to time wh
 
 Talks
 ------
-I have given talks at various conferences and workshops. Here are some of them:
+I have given talks at the following events:
 1. Talk at AIST  
     Title: Memorization and Membership Inference in LLMs
 2. Talk at UTokyo NLP Joint Meeting (Miyao Lab and Oseki Lab)  
