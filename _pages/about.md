@@ -14,11 +14,6 @@ I am a PhD stucent at the University of Tokyo, Department of Computer Science, [
 My research interests are in the field of Natural Language Processing, Machine Learning, and Deep Learning. The main focus of my research it LLM security, analysis and its interpretability. Previously, I also had some experience in Semantic Parsing and Cognitive Science X NLP.  
 I don't really maintain this site very often, reach me via email if you have any questions.
 
-
-My Background
-======
-Before I join the University of Tokyo, I was a student in the SCIR Lab at Harbin Institute of Technology, where I worked on the project of Temporal Commonsense Reasoning and Representation Learning.  
-
 My Interests
 ------
 Besides my research, my interest is gaming, especially JRPG games. 
@@ -28,7 +23,7 @@ Talks
 ------
 I have given talks at various conferences and workshops. Here are some of them:
 1. Talk at AIST  
-    Title: Memorization and Memebership Inference in LLMs
+    Title: Memorization and Membership Inference in LLMs
 2. Talk at UTokyo NLP Joint Meeting (Miyao Lab and Oseki Lab)  
     Title: A Multi-Perspective Analysis of Memorization in Large Language Models
 
