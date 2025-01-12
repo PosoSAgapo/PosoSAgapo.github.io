@@ -24,3 +24,11 @@ My Interests
 Besides my research, my interest is gaming, especially JRPG games. 
 I also like watching anime and reading manga. I also travel from time to time when I have free time.  
 
+Talks
+------
+I have given talks at various conferences and workshops. Here are some of them:
+1. Talk at AIST  
+    Title: Memorization and Memebership Inference in LLMs
+2. Talk at UTokyo NLP Joint Meeting (Miyao Lab and Oseki Lab)  
+    Title: A Multi-Perspective Analysis of Memorization in Large Language Models
+
