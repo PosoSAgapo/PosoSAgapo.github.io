@@ -13,7 +13,7 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 4. A Comprehensive Evaluation of Inductive Reasoning Capabilities and Problem Solving in Large Language Models  
 **Bowen Chen**, Rune Sætre, Yusuke Miyao at EACL Findings 2024  
 5. RIAND: Robustness-Improved and Accelerated Neural Deduplication  
-**Bowen Chen**, Sho Hoshino, Masato Mita, Peinan Zhang IEEE SSCI 2025
+**Bowen Chen** IEEE SSCI 2025
 6. A Multi-Perspective Analysis of Memorization in Large Language Models  
 **Bowen Chen**, Namgi Han, Yusuke Miyao at EMNLP Main Conference 2024
 
