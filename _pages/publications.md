@@ -5,7 +5,7 @@ author_profile: true
 ---
 ### Conference
 1. CogBERT: Cognition-guided pre-trained language models  
-**Xiao Ding**, **Bowen Chen**, Li Du, Bing Qin, Ting Liu at Coling 2022 (co-first with my supervisor Prof.Xiao Ding during Master study.)    
+**Xiao Ding***, **Bowen Chen***, Li Du, Bing Qin, Ting Liu at COLING 2022     
 2. Mitigating Reporting Bias in Semi-supervised Temporal Commonsense Inference with Probabilistic Soft Logic  
 Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022  
 3. Syntactic and Semantic Uniformity for Semantic Parsing and Task-Oriented Dialogue Systems  
@@ -22,13 +22,13 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 **Bowen Chen**, Xiao Ding, Yi Zhao, Bo Fu, Tingmao Lin, Bing Qin, Ting Liu at Machine Intellgience Research 2024 (Journal)
 ### Preprint/Under Review
 1. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
-**LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination problem.
+**LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination.
 2. A Statistical Revisiting the Member Inference Attack on Large Language Models  
 **Bowen Chen**, Namgi Han, Yusuke Miyao
 
 ### Non-refereed
 1. llm-jp-eval: 日本語大規模言語モデルの自動評価ツール  
-Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛一, 児玉 貴志, 菅原 朔, **Bowen Chen**, 松田 寛, 宮尾 祐介, 村脇 有吾, 劉 弘毅 (authors in alphabetical order) at 言語処理学会2024
+Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛一, 児玉 貴志, 菅原 朔, **Bowen Chen**, 松田 寛, 宮尾 祐介, 村脇 有吾, 劉 弘毅 at 言語処理学会2024
 
 
 
