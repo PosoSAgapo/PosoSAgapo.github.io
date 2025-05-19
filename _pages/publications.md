@@ -15,7 +15,9 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 5. RIAND: Robustness-Improved and Accelerated Neural Deduplication  
 **Bowen Chen** IEEE SSCI 2025
 6. A Multi-Perspective Analysis of Memorization in Large Language Models  
-**Bowen Chen**, Namgi Han, Yusuke Miyao at EMNLP Main Conference 2024
+**Bowen Chen**, Namgi Han, Yusuke Miyao at EMNLP Main Conference 2024 (Meta Full Score, Top 1%)
+7. A Statistical Revisiting the Member Inference Attack on Large Language Models  
+**Bowen Chen**, Namgi Han, Yusuke Miyao at ACL Main Conference 2025 (Meta Score 4, Top 10%)
 
 ### Journal
 1. Text Difficulty Study: Do machines behave the same as humans regarding text difficulty?   
@@ -23,12 +25,15 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 ### Preprint/Under Review
 1. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination.
-2. A Statistical Revisiting the Member Inference Attack on Large Language Models  
-**Bowen Chen**, Namgi Han, Yusuke Miyao
+2. OMS: OMS: One-the-fly, Multi-Objective, Self-Reflective Ad Keyword Generation via LLM Agent
+Bowen Chen, Zhao Wang, Takamatsu Shingo, ARR May
+
+
 
 ### Non-refereed
 1. llm-jp-eval: 日本語大規模言語モデルの自動評価ツール  
 Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛一, 児玉 貴志, 菅原 朔, **Bowen Chen**, 松田 寛, 宮尾 祐介, 村脇 有吾, 劉 弘毅 at 言語処理学会2024
-
+2. オープン日本語LLMリーダーボードの構築と評価結果の分析
+Namgi Han, 拓己岡本, 茂樹石田, 俊宏林, A Mousterou, **Bowen Chen**, 宮尾祐介
 
 

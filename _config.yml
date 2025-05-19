@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "selfie.jpg"
+  avatar           : "egoist.jpg"
   name             : "Bowen Chen"
   pronouns         : "he/him"
   bio              : "P.h.D. Candidate in Computer Science Dept of The University of Tokyo"
