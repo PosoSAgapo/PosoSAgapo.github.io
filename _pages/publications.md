@@ -21,7 +21,8 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 
 ### Journal
 1. Text Difficulty Study: Do machines behave the same as humans regarding text difficulty?   
-**Bowen Chen**, Xiao Ding, Yi Zhao, Bo Fu, Tingmao Lin, Bing Qin, Ting Liu at Machine Intellgience Research 2024 (Journal)
+**Bowen Chen**, Xiao Ding, Yi Zhao, Bo Fu, Tingmao Lin, Bing Qin, Ting Liu at Machine Intellgience Research 2024 (Journal)  
+
 ### Preprint/Under Review
 1. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination.  
