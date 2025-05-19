@@ -9,7 +9,7 @@ redirect_from:
 ## Work experience
 * Winter 2024: Internship 
   * Sony AI DSAI
-  * Topic: Large Language Model Agent Research
+  * Topic: Large Language Model Agent Research for Advertisement
   * Supervisor: Zhao Wang (Joe)
 
 * Spring 2024: Research Assistant 
