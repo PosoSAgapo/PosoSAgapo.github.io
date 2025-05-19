@@ -84,15 +84,21 @@
     display: block;
     width: auto;
     height: auto;
+    text-align: center;
+    margin-bottom: 1em;
   }
 
   img {
     max-width: 175px;
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
     border-radius: 50%;
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid $border-color;
+      border: 2px solid $primary-color;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
   }
 }
@@ -109,11 +115,14 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
   }
 }
 
 .author__name {
   margin: 0;
+  font-weight: 600;
+  color: $text-color;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -252,6 +261,22 @@
 
     &:hover {
       text-decoration: underline;
+    }
+    
+    @include breakpoint($large) {
+      &:hover {
+        color: $primary-color;
+        text-decoration: none;
+      }
+      
+      i {
+        color: $gray;
+        transition: color 0.2s ease;
+      }
+      
+      &:hover i {
+        color: $primary-color;
+      }
     }
   }
 }

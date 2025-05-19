@@ -4,11 +4,12 @@
 
 .masthead {
   position: fixed;
-  background: white;
+  background: $background-color;
   border-bottom: 1px solid $border-color;
   height: $masthead-height;
   top: 0;
   width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
@@ -32,6 +33,12 @@
 
     a {
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 }

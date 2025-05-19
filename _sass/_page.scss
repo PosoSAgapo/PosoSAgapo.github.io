@@ -25,6 +25,11 @@
 
   .page__inner-wrap {
     @include full();
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 2em;
+    margin-bottom: 2em;
 
     .page__content,
     .page__meta,
@@ -36,10 +41,13 @@
 
 .page__title {
   margin-top: 0;
-  line-height: 1;
+  line-height: 1.2;
+  color: $text-color;
+  font-weight: 600;
 
   & + .page__meta {
     margin-top: -0.5em;
+    color: $gray;
   }
 }
 
