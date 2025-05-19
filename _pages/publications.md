@@ -26,7 +26,7 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 1. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination.
 2. OMS: OMS: One-the-fly, Multi-Objective, Self-Reflective Ad Keyword Generation via LLM Agent
-Bowen Chen, Zhao Wang, Takamatsu Shingo, ARR May
+**Bowen Chen**, Zhao Wang, Takamatsu Shingo, ARR May
 
 
 
