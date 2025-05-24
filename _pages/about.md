@@ -22,7 +22,5 @@ Besides my research, my interest is gaming, especially JRPG games.
 I also like watching anime and reading manga. 
 I also travel from time to time when I have free time.  
 
-<div id="visitor-map-container"></div>
-
 
 
