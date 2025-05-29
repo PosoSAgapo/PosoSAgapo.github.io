@@ -54,8 +54,8 @@
   
   .sidebar .author__avatar img:hover {
     transform: scale(1.05) !important;
-    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.15) !important;
-    border-color: #60a5fa !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    border-color: #3498db !important;
   }
   
   .sidebar .author__content {
@@ -91,88 +91,4 @@
   .sidebar [itemscope] {
     text-align: left !important;
   }
-}
-
-/* Dark Theme Enhancements */
-/* Improve contrast and readability in dark theme */
-body {
-  background-color: #0f172a !important;
-  color: #f1f5f9 !important;
-}
-
-.masthead {
-  background-color: #1e293b !important;
-  border-bottom: 1px solid #334155 !important;
-}
-
-.page__content {
-  background-color: #0f172a !important;
-}
-
-.sidebar {
-  background-color: #1e293b !important;
-  border-right: 1px solid #334155 !important;
-}
-
-/* Code blocks */
-pre, code {
-  background-color: #1e293b !important;
-  color: #e2e8f0 !important;
-  border: 1px solid #334155 !important;
-}
-
-/* Tables */
-table {
-  background-color: #1e293b !important;
-  border: 1px solid #334155 !important;
-}
-
-th, td {
-  border: 1px solid #334155 !important;
-  color: #f1f5f9 !important;
-}
-
-th {
-  background-color: #334155 !important;
-}
-
-/* Navigation */
-.greedy-nav {
-  background-color: #1e293b !important;
-}
-
-.greedy-nav a {
-  color: #f1f5f9 !important;
-}
-
-.greedy-nav a:hover {
-  color: #60a5fa !important;
-}
-
-/* Footer */
-.page__footer {
-  background-color: #1e293b !important;
-  border-top: 1px solid #334155 !important;
-  color: #94a3b8 !important;
-}
-
-/* Archive pages */
-.archive__item-title {
-  color: #f1f5f9 !important;
-}
-
-.archive__item-excerpt {
-  color: #cbd5e1 !important;
-}
-
-/* Forms and inputs */
-input, textarea, select {
-  background-color: #334155 !important;
-  border: 1px solid #475569 !important;
-  color: #f1f5f9 !important;
-}
-
-input:focus, textarea:focus, select:focus {
-  border-color: #60a5fa !important;
-  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2) !important;
 }
