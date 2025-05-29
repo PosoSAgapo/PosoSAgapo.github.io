@@ -67,5 +67,20 @@
       text-align: left !important;
       margin: 0 0 20px 0 !important;
     }
+    
+    .author__urls-wrapper {
+      text-align: left !important;
+      margin: 0 !important;
+    }
+    
+    .author__urls {
+      text-align: left !important;
+      margin: 0 !important;
+    }
+    
+    // 确保整个author profile容器也左对齐
+    [itemscope] {
+      text-align: left !important;
+    }
   }
 }
