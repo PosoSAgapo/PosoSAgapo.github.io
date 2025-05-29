@@ -40,75 +40,32 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-// Custom CSS to fix author profile alignment in sidebar on large screens
+// Custom CSS to ensure name, pronouns, and bio are properly aligned under avatar
 @media screen and (min-width: 925px) {
   .sidebar {
     .author__avatar {
-      display: block !important;
       text-align: center !important;
-      margin: 0 auto 1em auto !important;
-      width: 100% !important;
+      margin-bottom: 1em !important;
     }
     
     .author__content {
-      display: block !important;
-      text-align: center !important;
-      margin: 0 auto !important;
+      text-align: left !important;
       padding: 0 !important;
-      width: 100% !important;
     }
     
     .author__name {
-      text-align: center !important;
-      margin: 10px auto !important;
-      display: block !important;
+      text-align: left !important;
+      margin: 0 0 5px 0 !important;
     }
     
     .author__pronouns {
-      text-align: center !important;
-      margin: 5px auto 10px auto !important;
-      display: block !important;
+      text-align: left !important;
+      margin: 0 0 10px 0 !important;
     }
     
     .author__bio {
-      text-align: center !important;
-      margin: 10px auto 20px auto !important;
-      display: block !important;
-    }
-    
-    .author__urls-wrapper {
-      display: block !important;
-      text-align: center !important;
-      margin: 0 auto !important;
-      width: 100% !important;
-    }
-    
-    .author__urls {
-      text-align: center !important;
-      margin: 0 auto !important;
-    }
-    
-    // 确保整个 author profile 区域都居中
-    [itemscope] {
-      text-align: center !important;
-      margin: 0 auto !important;
-      max-width: 100% !important;
-    }
-  }
-}
-
-// 额外的样式确保在超大屏幕上也能正确对齐
-@media screen and (min-width: 1280px) {
-  .sidebar {
-    .author__avatar,
-    .author__content,
-    .author__name,
-    .author__pronouns,
-    .author__bio,
-    .author__urls-wrapper {
-      text-align: center !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
+      text-align: left !important;
+      margin: 0 0 20px 0 !important;
     }
   }
 }
