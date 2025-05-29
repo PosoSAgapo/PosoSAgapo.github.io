@@ -40,47 +40,55 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-// Custom CSS to ensure all profile content is left-aligned including avatar
+/* Custom CSS to ensure all profile content is left-aligned including avatar with hover effects */
 @media screen and (min-width: 925px) {
-  .sidebar {
-    .author__avatar {
-      text-align: left !important;
-      margin-bottom: 1em !important;
-    }
-    
-    .author__content {
-      text-align: left !important;
-      padding: 0 !important;
-    }
-    
-    .author__name {
-      text-align: left !important;
-      margin: 0 0 5px 0 !important;
-    }
-    
-    .author__pronouns {
-      text-align: left !important;
-      margin: 0 0 10px 0 !important;
-    }
-    
-    .author__bio {
-      text-align: left !important;
-      margin: 0 0 20px 0 !important;
-    }
-    
-    .author__urls-wrapper {
-      text-align: left !important;
-      margin: 0 !important;
-    }
-    
-    .author__urls {
-      text-align: left !important;
-      margin: 0 !important;
-    }
-    
-    // 确保整个author profile容器也左对齐
-    [itemscope] {
-      text-align: left !important;
-    }
+  .sidebar .author__avatar {
+    text-align: left !important;
+    margin-bottom: 1em !important;
+  }
+  
+  .sidebar .author__avatar img {
+    transition: all 0.3s ease-in-out !important;
+    cursor: pointer !important;
+  }
+  
+  .sidebar .author__avatar img:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    border-color: #3498db !important;
+  }
+  
+  .sidebar .author__content {
+    text-align: left !important;
+    padding: 0 !important;
+  }
+  
+  .sidebar .author__name {
+    text-align: left !important;
+    margin: 0 0 5px 0 !important;
+  }
+  
+  .sidebar .author__pronouns {
+    text-align: left !important;
+    margin: 0 0 10px 0 !important;
+  }
+  
+  .sidebar .author__bio {
+    text-align: left !important;
+    margin: 0 0 20px 0 !important;
+  }
+  
+  .sidebar .author__urls-wrapper {
+    text-align: left !important;
+    margin: 0 !important;
+  }
+  
+  .sidebar .author__urls {
+    text-align: left !important;
+    margin: 0 !important;
+  }
+  
+  .sidebar [itemscope] {
+    text-align: left !important;
   }
 }
