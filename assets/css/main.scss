@@ -40,11 +40,11 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-// Custom CSS to ensure name, pronouns, and bio are properly aligned under avatar
+// Custom CSS to ensure all profile content is left-aligned including avatar
 @media screen and (min-width: 925px) {
   .sidebar {
     .author__avatar {
-      text-align: center !important;
+      text-align: left !important;
       margin-bottom: 1em !important;
     }
     
