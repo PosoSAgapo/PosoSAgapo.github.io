@@ -36,6 +36,6 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 1. llm-jp-eval: 日本語大規模言語モデルの自動評価ツール  
 Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛一, 児玉 貴志, 菅原 朔, **Bowen Chen**, 松田 寛, 宮尾 祐介, 村脇 有吾, 劉 弘毅 at 言語処理学会2024
 2. オープン日本語LLMリーダーボードの構築と評価結果の分析  
-Namgi Han, 拓己岡本, 茂樹石田, 俊宏林, A Mousterou, **Bowen Chen**, 宮尾祐介
+Namgi Han, 岡本, 拓己 石田 茂樹, 林 俊宏, Akim Mousterou, **Bowen Chen**, 宮尾 祐介
 
 
