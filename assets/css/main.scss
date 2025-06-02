@@ -92,3 +92,66 @@
     text-align: left !important;
   }
 }
+
+/* Footer custom content layout */
+.footer-custom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.footer-left {
+  flex: 0 0 auto;
+}
+
+.footer-right {
+  flex: 0 0 auto;
+}
+
+/* ClustrMaps widget styling - absolutely positioned in footer */
+.clustrmaps-widget-footer {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background: transparent;
+  border-radius: 3px;
+  padding: 2px;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+  min-width: 200px;
+  min-height: 100px;
+  z-index: 10;
+}
+
+.clustrmaps-widget-footer:hover {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Ensure the widget iframe/content expands properly */
+.clustrmaps-widget-footer iframe,
+.clustrmaps-widget-footer img,
+.clustrmaps-widget-footer canvas {
+  max-width: 100% !important;
+  height: auto !important;
+  min-width: 190px !important;
+  min-height: 90px !important;
+}
+
+/* Make it responsive */
+@media screen and (max-width: 768px) {
+  .clustrmaps-widget-footer {
+    display: none;
+  }
+}
+
+/* Hide on very small screens */
+@media screen and (max-width: 480px) {
+  .clustrmaps-widget-footer {
+    display: none;
+  }
+}
