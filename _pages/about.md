@@ -15,8 +15,7 @@ I am a PhD student at the University of Tokyo, Department of Computer Science, [
 ---
 
 My research interests are in the field of Natural Language Processing, Machine Learning, and Deep Learning. 
-The main focus of my research is LLM analysis and its interpretability, especially regarding its memorization and generalization.  
-Previously, I also had some experience in Semantic Parsing and Cognitive Science X NLP.  
+The main focus of my research is LLM analysis and its interpretability, especially regarding its memorization and generalization. Previously, I also had some experience in Semantic Parsing and Cognitive Science X NLP.  
 
 ---
 
