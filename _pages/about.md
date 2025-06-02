@@ -17,11 +17,7 @@ The main focus of my research is LLM analysis and its interpretability, especial
 Previously, I also had some experience in Semantic Parsing and Cognitive Science X NLP.  
 I don't really maintain this site very often, reach me via email if you have any questions.
 
-My Interests
-------
-Besides my research, my interest is gaming, especially JRPG games. 
-I also like watching anime and reading manga. 
-I also travel from time to time when I have free time.  
+
 
 
 
