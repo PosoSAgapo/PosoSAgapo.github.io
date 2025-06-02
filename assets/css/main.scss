@@ -159,17 +159,23 @@
 /* Archive layout spacing adjustment - add left margin to match single layout spacing */
 .archive {
   margin-bottom: 2em;
-  padding-left: 3em; /* Increase left padding for better spacing from sidebar */
+  padding-left: 2em; /* Further reduce left padding */
+  padding-right: 3em; /* Add right padding to prevent content from being too wide */
+  max-width: 900px; /* Limit maximum width for better readability */
 
   @include breakpoint($medium) {
     @include span(12 of 12);
-    padding-left: 4em; /* Increase padding on medium screens */
+    padding-left: 3em; /* Further reduce padding on medium screens */
+    padding-right: 2em; /* Right padding for medium screens */
+    max-width: 800px;
   }
 
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-    padding-left: 5em; /* More padding on large screens */
+    padding-left: 4em; /* Further reduce padding on large screens */
+    padding-right: 4em; /* More right padding on large screens */
+    max-width: 1000px;
   }
 
   a {
