@@ -155,3 +155,32 @@
     display: none;
   }
 }
+
+/* Archive layout spacing adjustment - add left margin to match single layout spacing */
+.archive {
+  margin-bottom: 2em;
+  padding-left: 3em; /* Increase left padding for better spacing from sidebar */
+
+  @include breakpoint($medium) {
+    @include span(12 of 12);
+    padding-left: 4em; /* Increase padding on medium screens */
+  }
+
+  @include breakpoint($large) {
+    @include span(10 of 12 last);
+    @include prefix(0.5 of 12);
+    padding-left: 5em; /* More padding on large screens */
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+
+      img {
+        box-shadow: 0 0 10px rgba(#000, 0.25);
+      }
+    }
+  }
+}
