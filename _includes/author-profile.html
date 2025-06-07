@@ -7,11 +7,24 @@
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}">
-    {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}">
-    {% endif %}
+    {% comment %}Random avatar selection{% endcomment %}
+    <img id="random-avatar" src="{{ base_path }}/images/egoist.gif" class="author__avatar" alt="{{ author.name }}">
+    <script>
+      (function() {
+        var avatars = [
+          'egoist.gif',
+          'academic.gif', 
+          'professional.gif',
+          'makoto.gif',
+          'makoto2.gif',
+          'makoto3.gif'
+        ];
+        var randomIndex = Math.floor(Math.random() * avatars.length);
+        var basePath = '{{ base_path }}';
+        var avatarElement = document.getElementById('random-avatar');
+        avatarElement.src = basePath + '/images/' + avatars[randomIndex];
+      })();
+    </script>
   </div>
 
   <div class="author__content">
