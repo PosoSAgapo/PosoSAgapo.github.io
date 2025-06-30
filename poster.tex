@@ -53,7 +53,7 @@
 {\Large\bf\textsc{A Statistical and Multi-Perspective Revisiting of the\\Membership Inference Attack in Large Language Models}\vspace{0.2em}}
 % Authors
 {\normalsize\textsc{Bowen Chen$^{1}$, Namgi Han$^{1}$, Yusuke Miyao$^{1,2}$}\vspace{0.15em}\\
-\small $^1$Department of Computer Science, The University of Tokyo \quad $^2$R\&D Center for LLMs, National Institute of Informatics\\
+\small $^1$Department of Computer Science, The University of Tokyo \quad $^2$Research and Development Center for Large Language Models, National Institute of Informatics\\
 \small\texttt{\{bwchen, hng88, yusuke\}@is.s.u-tokyo.ac.jp}
 }
 % Institution logos
@@ -65,7 +65,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Motivation \& Experimental Setup}{name=abstract,column=0,row=0}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{minipage}[c]{0.5\textwidth}
 \centering
 \includegraphics[width=0.8\linewidth]{figures/newfigure.pdf}
@@ -73,10 +73,10 @@
 \begin{minipage}[c]{0.5\textwidth}
 \textbf{Problems:}
 \begin{itemize}[leftmargin=em,itemsep=0.05em]
-\item Single-setting experiments → biased evaluation
+\item Single-setting MIA experiments → biased evaluation, creating an inconsistent performance across previous literature.
 \item We need a statistical-level analysis
 \end{itemize}
-\textbf{Setup:}
+\textbf{Setup:} 5,000+ experiments to profile one MIA method
 
 \begin{itemize}[leftmargin=em,itemsep=0.05em]
 \item \textbf{Methods}: 11 MIA methods
@@ -92,34 +92,32 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{minipage}[c]{0.55\textwidth}
 \centering
-\includegraphics[width=0.75\linewidth]{figures/combined_subplots.png}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.42\textwidth}
-\begin{enumerate}[leftmargin=1em,itemsep=0.1em]
-\item \textbf{Splitting Method Effect}: Relative Split > Complete Split > Truncate Split
-\item \textbf{Model Size}: Performance scales with model size, especially 1B→2.8B stage
-\item \textbf{Domain Differences}: Wikipedia, FreeLaw perform best; code/math domains worse
-\item \textbf{Method Comparison}: Min-k\% ++ and ReCaLL relatively better, but most methods don't significantly outperform baselines
-\end{enumerate}
-\end{minipage}
-}
-
-\headerbox{Threshold Stability}{name=outliers,column=0,span=2,below=results}{
-\begin{minipage}[c]{0.55\textwidth}
-\centering
-\includegraphics[width=1\linewidth, height=0.45\linewidth]{figures/boxplot_best_threshold.png}
+\includegraphics[width=1\linewidth, height=0.4\linewidth]{figures/comparison_subplots.png}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.42\textwidth}
 \begin{itemize}[leftmargin=1em,itemsep=0.1em]
-\item Thresholds vary significantly across domains
-\item Thresholds change with model sizes
+\item \textbf{Splitting Method Effect}: Relative Split > Complete Split > Truncate Split
+\item \textbf{Model Size}: Performance scales with model size, indicating an internal change occurred in LLM that benefits the MIA when increasing model size.
+\item \textbf{Domain Differences}: Wikipedia, FreeLaw perform best, e.g, free text domain with high token diversity; code/math domains worse, e.g, domains with lower token diversity
+\item \textbf{Method Comparison}: Min-k\% ++ and ReCaLL relatively better, but most methods don't significantly outperform baselines 
+\end{itemize}
+\end{minipage}
+}
+
+\headerbox{Threshold Stability}{name=outliers,column=0,span=2,below=results}{
+\begin{minipage}[c]{0.5\textwidth}
+\centering
+\includegraphics[width=1\linewidth, height=0.45\linewidth]{figures/corped_boxplot_best_threshold.png}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.42\textwidth}
+\begin{itemize}[leftmargin=1em,itemsep=0.1em]
+\item Thresholds vary significantly across domains, and outliers exist, showing the instability of a good threshold.
+\item Thresholds change with model sizes, meaning that a threshold decided in a small or large model cannot be applied to another model size
 \item The lack of universal thresholds is an overlooked challenge for MIA methods in real-world applications, severely affecting practicality.
 \end{itemize}
 
-\textbf{Practical Impact:}
-This threshold instability severely limits the real-world applicability of current MIA methods.
 \end{minipage}
 }
 
@@ -135,9 +133,9 @@ This threshold instability severely limits the real-world applicability of curre
 \hfill
 \begin{minipage}[c]{0.5\textwidth}
 \begin{itemize}[leftmargin=1em,itemsep=0.05em]
-\item Only 6\% overlap between best-performing methods
-\item No single method dominates across scenarios
-\item Different methods identify different outliers
+\item Different MIA methods differentiate different MIA datasets 
+\item No single method dominates other MIA methods.
+\item This suggests that different MIA methods are effective in different situations.
 \end{itemize}
 
 \end{minipage}
@@ -152,14 +150,13 @@ This threshold instability severely limits the real-world applicability of curre
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.42\textwidth}
-\begin{enumerate}[leftmargin=1em,itemsep=0.1em]
-\item \textbf{Layer Changes}: Middle layers show better separability, final layer rebounds
-\item \textbf{Model Size}: Large models show emergent behavior, significantly improved separability
-\item \textbf{Final Layer Limitation}: Current MIA methods' reliance on final layer embeddings is suboptimal
-\end{enumerate}
+\begin{itemize}[leftmargin=1em,itemsep=0.1em]
+\item \textbf{Internal Correlation}: Whether being differentiable or not is also reflected in the embedding level.
+\item \textbf{Model Size}: Large models show emergent behavior, significantly improved embedding separability when reaching deep layers in larger models.
+\item \textbf{Final Layer Limitation}: Current MIA methods' reliance on final layer embeddings is suboptimal, as the final layer has a low embedding separability.
+\end{itemize}
 
-\textbf{Implications:}
-Future MIA methods should integrate multi-layer information rather than relying solely on final layer outputs.
+
 \end{minipage}
 }
 
@@ -167,12 +164,11 @@ Future MIA methods should integrate multi-layer information rather than relying 
 \headerbox{Conclusions \& Future Work}{name=conclusion,column=0,span=2,below=embedding,above=bottom}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{minipage}[c]{0.65\textwidth}
-\textbf{Key Takeaways:}
 \begin{itemize}[leftmargin=1em,itemsep=0.1em]
-\item A Statistical revisiting of the MIA method to address the performance inconsistency.
-\item It is hard to find a stable threshold to differentiate members and non-members.
-\item Different MIA method works on differnet situations, indicating a no "winner-takes-all" situations in MIA.
-\item The differentiability is reflected in LLM inner strcture, including both the embedding seperability and the decoding dynamics.
+\item We conducted a statistical revisiting of the MIA method to address the performance inconsistency.
+\item It is challenging to determine a stable threshold for differentiating between members and non-members.
+\item Different MIA methods work in different situations, indicating that there are no "winner-takes-all" situations in MIA.
+\item The differentiability is reflected in LLM's inner structure, including both the embedding separability and the decoding dynamics.
 \end{itemize}
 
 
@@ -187,7 +183,16 @@ Future MIA methods should integrate multi-layer information rather than relying 
 \hfill
 \begin{minipage}[c]{0.32\textwidth}
 \begin{center}
-\includegraphics[width=0.45\linewidth]{figures/qr_code.png}
+\colorbox{lightblue!20}{\begin{minipage}{0.9\textwidth}
+\centering
+\vspace{0.3em}
+{\small\textbf{\textcolor{darkblue}{GitHub Repository}}}\\
+\vspace{0.2em}
+\includegraphics[width=0.6\textwidth]{figures/qr_code.png}\\
+\vspace{0.1em}
+{\tiny\textcolor{gray}{Scan QR code to access GitHub repository}}\\
+\vspace{0.3em}
+\end{minipage}}
 \end{center}
 \end{minipage}
 }

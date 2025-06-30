@@ -29,6 +29,8 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination.  
 2. OMS: On-the-fly, Multi-Objective, Self-Reflective Ad Keyword Generation via LLM Agent  
 **Bowen Chen**, Zhao Wang, Takamatsu Shingo, ARR May (arXiv)  
+3. Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents
+**Zhao Wang**, **Bowen Chen**, **Yotaro Shimose**, Sota Moriyama, Heng Wang, Shingo Takamatsu, EMNLP Industry Track
 
 
 
