@@ -60,13 +60,13 @@
               {% assign src = f.path | prepend: '/' | prepend: cdn_base %}
             {% endif %}
             {% assign alt = f.alt | default: f.title | default: '' %}
-            <a class="album-card__thumb" href="{{ base_path }}{{ post.url }}" title="{{ post.title }}">
+            <a class="album-card__thumb" href="{{ base_path }}{{ post.url }}">
               <img src="{{ src }}" alt="{{ alt }}" loading="lazy">
             </a>
           {% else %}
             {% assign filename = f.name | split: "." | first %}
             {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
-            <a class="album-card__thumb" href="{{ base_path }}{{ post.url }}" title="{{ post.title }}">
+            <a class="album-card__thumb" href="{{ base_path }}{{ post.url }}">
               <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
             </a>
           {% endif %}

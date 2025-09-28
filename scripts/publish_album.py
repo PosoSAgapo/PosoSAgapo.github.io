@@ -86,7 +86,7 @@ def render_album_md(slug: str, title: str, date_str: str, teaser_url: str) -> st
             lines.append(f"{k}: {v}")
     lines.append("---")
     lines.append("")
-    lines.append("{% include auto_gallery.html data_key=page.data_key caption=page.title layout=\"masonry\" %}")
+    lines.append("{% include auto_gallery.html data_key=page.data_key layout=\"masonry\" %}")
     lines.append("")
     return "\n".join(lines)
 

@@ -413,7 +413,7 @@ figure.half img {
 
 .album-card__thumb::after,
 .masonry-item a::after {
-  content: attr(title);
+  content: ""; /* hide filename text */
   position: absolute;
   left: 0.5rem;
   right: 0.5rem;

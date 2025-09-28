@@ -51,7 +51,7 @@ Priority: 1) data_key manifest -> 2) local dir scanning
         {% endif %}
         {% assign alt = img.alt | default: img.title | default: '' %}
         <div class="masonry-item">
-          <a href="{{ src }}" title="{{ alt }}">
+          <a href="{{ src }}">
             <img src="{{ src }}" alt="{{ alt }}" loading="lazy">
           </a>
         </div>
@@ -63,7 +63,7 @@ Priority: 1) data_key manifest -> 2) local dir scanning
           {% assign filename = f.name | split: "." | first %}
           {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
           <div class="masonry-item">
-            <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
+            <a href="{{ f.path | prepend: base_path }}">
               <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
             </a>
           </div>
@@ -83,7 +83,7 @@ Priority: 1) data_key manifest -> 2) local dir scanning
           {% assign src = img.path | prepend: '/' | prepend: cdn_base %}
         {% endif %}
         {% assign alt = img.alt | default: img.title | default: '' %}
-        <a href="{{ src }}" title="{{ alt }}">
+        <a href="{{ src }}">
           <img src="{{ src }}" alt="{{ alt }}" loading="lazy">
         </a>
       {% endfor %}
@@ -93,7 +93,7 @@ Priority: 1) data_key manifest -> 2) local dir scanning
         {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
           {% assign filename = f.name | split: "." | first %}
           {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
-          <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
+          <a href="{{ f.path | prepend: base_path }}">
             <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
           </a>
         {% endif %}
