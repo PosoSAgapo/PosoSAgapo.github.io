@@ -1,3 +1,35 @@
+## Publish album to Cloudflare R2 (automation)
+
+Prereqs:
+- Python 3.9+
+- `pip install -r requirements.txt`
+- Env vars:
+  - `R2_ACCOUNT_ID`
+  - `R2_ACCESS_KEY_ID`
+  - `R2_SECRET_ACCESS_KEY`
+  - `R2_BUCKET`
+  - optional `CDN_BASE` (e.g. `https://img.utokyobwchen.men`)
+
+Usage:
+```bash
+python scripts/publish_album.py \
+  --album-dir ./_local_albums/tgs2025 \
+  --slug tgs2025 \
+  --title "Tokyo Game Show 2025" \
+  --date 2025-09-27
+```
+
+This will:
+- Upload images to `images/travel/<slug>/` in R2
+- Write `_data/albums/<slug>.yml`
+- Create `/_albums/<slug>.md` if missing (wired to manifest mode)
+
+Then commit and push:
+```bash
+git add _data/albums/*.yml _albums/*.md
+git commit -m "feat(albums): publish <slug>"
+git push
+```
 
 # Academic Pages
 
