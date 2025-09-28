@@ -8,4 +8,4 @@ data_key: albums.kahaku
 author_profile: False
 ---
 
-{% include auto_gallery.html data_key=page.data_key caption= layout="masonry" %}
+{% include auto_gallery.html data_key=page.data_key layout="masonry" %}
