@@ -22,7 +22,7 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 8. OMS: On-the-fly, Multi-Objective, Self-Reflective Ad Keyword Generation via LLM Agent  
 **Bowen Chen**, Zhao Wang, Takamatsu Shingo at EMNLP Main Conference 2025  
 9. Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents
-**Zhao Wang**, **Bowen Chen**, **Yotaro Shimose**, Sota Moriyama, Heng Wang, Shingo Takamatsu, EMNLP Industry Track
+**Zhao Wang**, **Bowen Chen**, **Yotaro Shimose**, Sota Moriyama, Heng Wang, Shingo Takamatsu, EMNLP 2025 Industry Track
 
 ### Journal
 1. Text Difficulty Study: Do machines behave the same as humans regarding text difficulty?   
