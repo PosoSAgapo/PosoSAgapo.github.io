@@ -25,3 +25,14 @@ I don't really maintain this site very often, reach me via email if you have any
 
 
 
+
+---
+
+Latest Photos
+
+{% assign gallery = site.pages | where: "permalink", "/photos/" | first %}
+{% if gallery and gallery.gallery %}
+{% include gallery id="gallery" caption="See more in Photos →" %}
+{% else %}
+<p>Visit the <a href="/photos/">Photos</a> page to see albums.</p>
+{% endif %}
