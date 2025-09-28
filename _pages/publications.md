@@ -20,7 +20,9 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 7. A Statistical Revisiting the Member Inference Attack on Large Language Models  
 **Bowen Chen**, Namgi Han, Yusuke Miyao at ACL Main Conference 2025 (Meta Score 4, Top 10%)
 8. OMS: On-the-fly, Multi-Objective, Self-Reflective Ad Keyword Generation via LLM Agent  
-**Bowen Chen**, Zhao Wang, Takamatsu Shingo at EMNLP Main Conference 2025
+**Bowen Chen**, Zhao Wang, Takamatsu Shingo at EMNLP Main Conference 2025  
+9. Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents
+**Zhao Wang**, **Bowen Chen**, **Yotaro Shimose**, Sota Moriyama, Heng Wang, Shingo Takamatsu, EMNLP Industry Track
 
 ### Journal
 1. Text Difficulty Study: Do machines behave the same as humans regarding text difficulty?   
@@ -29,8 +31,7 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 ### Preprint & Under Review
 1. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination.   
-2. Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents
-**Zhao Wang**, **Bowen Chen**, **Yotaro Shimose**, Sota Moriyama, Heng Wang, Shingo Takamatsu, EMNLP Industry Track
+
 
 
 
