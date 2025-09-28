@@ -301,6 +301,11 @@ whitelist:
   - jemoji
 
 
+# CDN base (optional). If set, gallery will prefix image paths with this base.
+# Example: https://img.utokyobwchen.men
+cdn_base: https://img.utokyobwchen.men
+
+
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)

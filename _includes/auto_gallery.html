@@ -1,7 +1,24 @@
 {% include base_path %}
 
-{% assign folder = include.dir | prepend: "/images/" | append: "/" | replace: "///", "/" | replace: "//", "/" %}
-{% assign files_in_dir = site.static_files | where_exp: "f", "f.path contains folder" %}
+{% comment %}
+Priority: 1) data_key manifest -> 2) local dir scanning
+{% endcomment %}
+
+{% assign cdn_base = site.cdn_base %}
+
+{% if include.data_key %}
+  {% assign manifest = include.data_key | split: '.' %}
+  {% assign data_root = site.data %}
+  {% for k in manifest %}
+    {% assign data_root = data_root[k] %}
+  {% endfor %}
+  {% assign manifest_images = data_root %}
+{% endif %}
+
+{% unless manifest_images %}
+  {% assign folder = include.dir | prepend: "/images/" | append: "/" | replace: "///", "/" | replace: "//", "/" %}
+  {% assign files_in_dir = site.static_files | where_exp: "f", "f.path contains folder" %}
+{% endunless %}
 
 {% assign count = 0 %}
 {% for f in files_in_dir %}
@@ -26,34 +43,62 @@
 
 {% if layout == 'masonry' %}
   <div class="masonry {{ include.class }}">
-    {% for f in files_in_dir %}
-      {% assign ext = f.extname | downcase %}
-      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
-        {% assign filename = f.name | split: "." | first %}
-        {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
+    {% if manifest_images %}
+      {% for img in manifest_images %}
+        {% assign src = img.url %}
+        {% if cdn_base and img.path %}
+          {% assign src = img.path | prepend: '/' | prepend: cdn_base %}
+        {% endif %}
+        {% assign alt = img.alt | default: img.title | default: '' %}
         <div class="masonry-item">
-          <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
-            <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
+          <a href="{{ src }}" title="{{ alt }}">
+            <img src="{{ src }}" alt="{{ alt }}" loading="lazy">
           </a>
         </div>
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    {% else %}
+      {% for f in files_in_dir %}
+        {% assign ext = f.extname | downcase %}
+        {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
+          {% assign filename = f.name | split: "." | first %}
+          {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
+          <div class="masonry-item">
+            <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
+              <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
     {% if include.caption %}
       <p class="gallery__caption">{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</p>
     {% endif %}
   </div>
 {% else %}
   <figure class="{{ gallery_layout }} {{ include.class }}">
-    {% for f in files_in_dir %}
-      {% assign ext = f.extname | downcase %}
-      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
-        {% assign filename = f.name | split: "." | first %}
-        {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
-        <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
-          <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
+    {% if manifest_images %}
+      {% for img in manifest_images %}
+        {% assign src = img.url %}
+        {% if cdn_base and img.path %}
+          {% assign src = img.path | prepend: '/' | prepend: cdn_base %}
+        {% endif %}
+        {% assign alt = img.alt | default: img.title | default: '' %}
+        <a href="{{ src }}" title="{{ alt }}">
+          <img src="{{ src }}" alt="{{ alt }}" loading="lazy">
         </a>
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    {% else %}
+      {% for f in files_in_dir %}
+        {% assign ext = f.extname | downcase %}
+        {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
+          {% assign filename = f.name | split: "." | first %}
+          {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
+          <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
+            <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
+          </a>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
     {% if include.caption %}
       <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
     {% endif %}

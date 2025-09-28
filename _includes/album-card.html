@@ -1,10 +1,20 @@
 {% include base_path %}
 {% assign post = include.post %}
 {% assign dir = post.dir %}
+{% assign data_key = post.data_key %}
+{% assign cdn_base = site.cdn_base %}
 
 <article class="album-card">
   {% assign total_count = 0 %}
-  {% if dir %}
+  {% if data_key %}
+    {% assign manifest = data_key | split: '.' %}
+    {% assign data_root = site.data %}
+    {% for k in manifest %}
+      {% assign data_root = data_root[k] %}
+    {% endfor %}
+    {% assign files_in_dir = data_root %}
+    {% assign total_count = files_in_dir | size %}
+  {% elsif dir %}
     {% assign folder = dir | prepend: "/images/" | append: "/" | replace: "///", "/" | replace: "//", "/" %}
     {% assign files_in_dir = site.static_files | where_exp: "f", "f.path contains folder" %}
     {% for f in files_in_dir %}
@@ -27,12 +37,16 @@
     {% endif %}
   </div>
 
-  {% if dir %}
+  {% if data_key or dir %}
     {% assign previews = '' | split: '' %}
     {% for f in files_in_dir %}
-      {% assign ext = f.extname | downcase %}
-      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
+      {% if data_key %}
         {% assign previews = previews | push: f %}
+      {% else %}
+        {% assign ext = f.extname | downcase %}
+        {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
+          {% assign previews = previews | push: f %}
+        {% endif %}
       {% endif %}
     {% endfor %}
 
@@ -40,11 +54,22 @@
     {% if previews.size > 0 %}
       <div class="album-card__thumbs">
         {% for f in previews %}
-          {% assign filename = f.name | split: "." | first %}
-          {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
-          <a class="album-card__thumb" href="{{ base_path }}{{ post.url }}" title="{{ post.title }}">
-            <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
-          </a>
+          {% if data_key %}
+            {% assign src = f.url %}
+            {% if cdn_base and f.path %}
+              {% assign src = f.path | prepend: '/' | prepend: cdn_base %}
+            {% endif %}
+            {% assign alt = f.alt | default: f.title | default: '' %}
+            <a class="album-card__thumb" href="{{ base_path }}{{ post.url }}" title="{{ post.title }}">
+              <img src="{{ src }}" alt="{{ alt }}" loading="lazy">
+            </a>
+          {% else %}
+            {% assign filename = f.name | split: "." | first %}
+            {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
+            <a class="album-card__thumb" href="{{ base_path }}{{ post.url }}" title="{{ post.title }}">
+              <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
+            </a>
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
