@@ -1,22 +1,12 @@
 ---
-layout: single
-title: "Random Photos"
+layout: archive
+title: "Travel Albums"
 permalink: /photos/
 author_profile: true
-gallery:
-  - image_path: travel/tokyo-1.jpg
-    alt: Tokyo Game Show 2025
-    url: travel/tokyo-1.jpg
-  - image_path: travel/kyoto-1.jpg
-    alt: Kyoto streets
-    url: travel/kyoto-1.jpg
-  - image_path: travel/osaka-1.jpg
-    alt: Osaka vibes
-    url: travel/osaka-1.jpg
-  - image_path: travel/hokkaido-1.jpg
-    alt: Hokkaido
-    url: travel/hokkaido-1.jpg
 ---
 
+{% assign albums = site.albums | sort: 'date' | reverse %}
 
-
+{% for post in albums %}
+  {% include archive-single.html type="grid" %}
+{% endfor %}
