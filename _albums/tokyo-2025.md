@@ -6,6 +6,6 @@ header:
 dir: travel/tgs2025/
 ---
 
-{% include auto_gallery dir=page.dir caption="Tokyo 2025" %}
+{% include auto_gallery.html dir=page.dir caption="Tokyo 2025" %}
 
 
