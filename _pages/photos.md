@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Photos"
+title: "Random Photos"
 permalink: /photos/
 author_profile: true
 gallery:
@@ -18,8 +18,5 @@ gallery:
     url: travel/hokkaido-1.jpg
 ---
 
-Here are some of my travel photos. Click any image to view in a lightbox gallery.
-
-{% include gallery caption="More albums coming soon." %}
 
 
