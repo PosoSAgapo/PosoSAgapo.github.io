@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Travel Albums"
+title: ""
 permalink: /photos/
 author_profile: true
 ---
@@ -8,5 +8,5 @@ author_profile: true
 {% assign albums = site.albums | sort: 'date' | reverse %}
 
 {% for post in albums %}
-  {% include archive-single.html type="grid" %}
+  {% include album-card.html post=post %}
 {% endfor %}

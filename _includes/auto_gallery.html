@@ -11,28 +11,53 @@
   {% endif %}
 {% endfor %}
 
-{% if count == 2 %}
-  {% assign gallery_layout = 'half' %}
-{% elsif count >= 3 %}
-  {% assign gallery_layout = 'third' %}
+{% assign layout = include.layout | default: 'grid' %}
+{% if layout == 'masonry' %}
+  {% assign gallery_layout = 'masonry' %}
 {% else %}
-  {% assign gallery_layout = '' %}
+  {% if count == 2 %}
+    {% assign gallery_layout = 'half' %}
+  {% elsif count >= 3 %}
+    {% assign gallery_layout = 'third' %}
+  {% else %}
+    {% assign gallery_layout = '' %}
+  {% endif %}
 {% endif %}
 
-<figure class="{{ gallery_layout }} {{ include.class }}">
-  {% for f in files_in_dir %}
-    {% assign ext = f.extname | downcase %}
-    {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
-      {% assign filename = f.name | split: "." | first %}
-      {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
-      <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
-        <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}">
-      </a>
+{% if layout == 'masonry' %}
+  <div class="masonry {{ include.class }}">
+    {% for f in files_in_dir %}
+      {% assign ext = f.extname | downcase %}
+      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
+        {% assign filename = f.name | split: "." | first %}
+        {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
+        <div class="masonry-item">
+          <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
+            <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% if include.caption %}
+      <p class="gallery__caption">{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</p>
     {% endif %}
-  {% endfor %}
-  {% if include.caption %}
-    <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
-  {% endif %}
-</figure>
+  </div>
+{% else %}
+  <figure class="{{ gallery_layout }} {{ include.class }}">
+    {% for f in files_in_dir %}
+      {% assign ext = f.extname | downcase %}
+      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
+        {% assign filename = f.name | split: "." | first %}
+        {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
+        <a href="{{ f.path | prepend: base_path }}" title="{{ alt }}">
+          <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
+        </a>
+      {% endif %}
+    {% endfor %}
+    {% if include.caption %}
+      <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+    {% endif %}
+  </figure>
+{% endif %}
 
 

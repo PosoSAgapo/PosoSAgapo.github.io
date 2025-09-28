@@ -1,0 +1,58 @@
+{% include base_path %}
+{% assign post = include.post %}
+{% assign dir = post.dir %}
+
+<article class="album-card">
+  {% assign total_count = 0 %}
+  {% if dir %}
+    {% assign folder = dir | prepend: "/images/" | append: "/" | replace: "///", "/" | replace: "//", "/" %}
+    {% assign files_in_dir = site.static_files | where_exp: "f", "f.path contains folder" %}
+    {% for f in files_in_dir %}
+      {% assign ext = f.extname | downcase %}
+      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
+        {% assign total_count = total_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <div class="album-card__meta">
+    <div class="album-card__head">
+      <h2 class="album-card__title"><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h2>
+      {% if total_count > 0 %}
+        <span class="album-card__count">{{ total_count }}</span>
+      {% endif %}
+    </div>
+    {% if post.date %}
+      <p class="album-card__date">{{ post.date | date: "%B %d, %Y" }}</p>
+    {% endif %}
+  </div>
+
+  {% if dir %}
+    {% assign previews = '' | split: '' %}
+    {% for f in files_in_dir %}
+      {% assign ext = f.extname | downcase %}
+      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".avif" %}
+        {% assign previews = previews | push: f %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign previews = previews | slice: 0, 3 %}
+    {% if previews.size > 0 %}
+      <div class="album-card__thumbs">
+        {% for f in previews %}
+          {% assign filename = f.name | split: "." | first %}
+          {% assign alt = filename | replace: "-", " " | replace: "_", " " | strip | capitalize %}
+          <a class="album-card__thumb" href="{{ base_path }}{{ post.url }}" title="{{ post.title }}">
+            <img src="{{ f.path | prepend: base_path }}" alt="{{ alt }}" loading="lazy">
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {% if post.excerpt %}
+    <p class="album-card__excerpt">{{ post.excerpt | markdownify | strip_html }}</p>
+  {% endif %}
+</article>
+
+
