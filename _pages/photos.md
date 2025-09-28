@@ -5,7 +5,7 @@ permalink: /photos/
 author_profile: true
 gallery:
   - image_path: travel/tokyo-1.jpg
-    alt: Tokyo night view
+    alt: Tokyo Game Show 2025
     url: travel/tokyo-1.jpg
   - image_path: travel/kyoto-1.jpg
     alt: Kyoto streets
