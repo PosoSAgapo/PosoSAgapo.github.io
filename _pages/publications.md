@@ -21,7 +21,7 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 **Bowen Chen**, Namgi Han, Yusuke Miyao at ACL Main Conference 2025 (Meta Score 4, Top 10%)
 8. OMS: On-the-fly, Multi-Objective, Self-Reflective Ad Keyword Generation via LLM Agent  
 **Bowen Chen**, Zhao Wang, Takamatsu Shingo at EMNLP Main Conference 2025  
-9. Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents
+9. Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents  
 **Zhao Wang**, **Bowen Chen**, **Yotaro Shimose**, Sota Moriyama, Heng Wang, Shingo Takamatsu, EMNLP 2025 Industry Track
 
 ### Journal
