@@ -16,9 +16,9 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 5. RIAND: Robustness-Improved and Accelerated Neural Deduplication  
 **Bowen Chen** IEEE SSCI 2025
 6. A Multi-Perspective Analysis of Memorization in Large Language Models  
-**Bowen Chen**, Namgi Han, Yusuke Miyao at EMNLP Main Conference 2024 (Meta Full Score, Top 1%)
+**Bowen Chen**, Namgi Han, Yusuke Miyao at EMNLP Main Conference 2024 
 7. A Statistical Revisiting the Member Inference Attack on Large Language Models  
-**Bowen Chen**, Namgi Han, Yusuke Miyao at ACL Main Conference 2025 (Meta Score 4, Top 10%)
+**Bowen Chen**, Namgi Han, Yusuke Miyao at ACL Main Conference 2025 
 8. OMS: On-the-fly, Multi-Objective, Self-Reflective Ad Keyword Generation via LLM Agent  
 **Bowen Chen**, Zhao Wang, Takamatsu Shingo at EMNLP Main Conference 2025  
 9. Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents  
