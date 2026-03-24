@@ -32,7 +32,7 @@ Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022
 1. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
 **LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination.  
 2. A Comparative Analysis of LLM Memorization at Statistical and Internal
-Levels: Cross-Model Commonalities and Model-Specific Signatures.   
+Levels: Cross-Model Commonalities and Model-Specific Signatures   
 **Bowen Chen**, Namgi Han, Yusuke Miyao  
 
 
