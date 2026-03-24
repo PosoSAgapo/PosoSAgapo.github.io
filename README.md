@@ -16,7 +16,8 @@ python scripts/publish_album.py \
   --album-dir ./_local_albums/tgs2025 \
   --slug tgs2025 \
   --title "Tokyo Game Show 2025" \
-  --date 2025-09-27
+  --date 2025-09-27 \
+  --mode append
 ```
 
 This will:
@@ -30,6 +31,18 @@ git add _data/albums/*.yml _albums/*.md
 git commit -m "feat(albums): publish <slug>"
 git push
 ```
+
+### Update an existing album with new photos
+Place new photos under a local folder and run:
+```bash
+python scripts/publish_album.py \
+  --album-dir ./_local_albums/tgs2025_additions \
+  --slug tgs2025 \
+  --title "Tokyo Game Show 2025" \
+  --date 2025-09-27 \
+  --mode append
+```
+This uploads only the new files, merges them into `_data/albums/tgs2025.yml` without duplications, and keeps the existing album page intact.
 
 # Academic Pages
 

@@ -100,6 +100,12 @@ def main() -> None:
     ap.add_argument("--dest-prefix", default="images/travel", help="Destination prefix in bucket")
     ap.add_argument("--teaser", default="", help="Teaser filename within the album-dir (optional)")
     ap.add_argument("--dry-run", action="store_true", help="Do not upload or write files")
+    ap.add_argument(
+        "--mode",
+        choices=["append", "replace"],
+        default="append",
+        help="How to update _data manifest: append to existing (default) or replace"
+    )
 
     args = ap.parse_args()
 
@@ -157,13 +163,34 @@ def main() -> None:
         alt = Path(key).name.rsplit(".", 1)[0].replace("_", " ").replace("-", " ").strip()
         entries.append({"path": key, "alt": alt})
 
-    # Write _data/albums/<slug>.yml
+    # Write _data/albums/<slug>.yml (append or replace)
     data_file = Path("_data/albums") / f"{args.slug}.yml"
     if args.dry_run:
-        print(f"[DRY] write manifest: {data_file} with {len(entries)} items")
+        print(f"[DRY] write manifest: {data_file} with {len(entries)} new items (mode={args.mode})")
     else:
-        write_yaml_list(data_file, entries)
-        print(f"[OK] Wrote manifest: {data_file}")
+        final_entries: list[dict]
+        if data_file.exists() and args.mode == "append":
+            try:
+                existing: list[dict] = yaml.safe_load(data_file.read_text(encoding="utf-8")) or []
+            except Exception:
+                existing = []
+            # deduplicate by path/url, keep order: existing first, then new
+            seen = set()
+            final_entries = []
+            for it in existing:
+                key = it.get("path") or it.get("url")
+                if key and key not in seen:
+                    final_entries.append(it)
+                    seen.add(key)
+            for it in entries:
+                key = it.get("path") or it.get("url")
+                if key and key not in seen:
+                    final_entries.append(it)
+                    seen.add(key)
+        else:
+            final_entries = entries
+        write_yaml_list(data_file, final_entries)
+        print(f"[OK] Wrote manifest: {data_file} ({len(final_entries)} total items, mode={args.mode})")
 
     # Create album page if missing
     album_md = Path("_albums") / f"{args.slug}.md"
