@@ -4,46 +4,8 @@ title: ""
 permalink: /publications/
 author_profile: true
 ---
-### Conference
-1. CogBERT: Cognition-guided pre-trained language models  
-**Xiao Ding***, **Bowen Chen***, Li Du, Bing Qin, Ting Liu at COLING 2022     
-2. Mitigating Reporting Bias in Semi-supervised Temporal Commonsense Inference with Probabilistic Soft Logic  
-Bibo Cai, Xiao Ding, **Bowen Chen**, Li Du, Ting Liu at AAAI 2022  
-3. Syntactic and Semantic Uniformity for Semantic Parsing and Task-Oriented Dialogue Systems  
-**Bowen Chen**, Yusuke Miyao at EMNLP 2022 Findings
-4. A Comprehensive Evaluation of Inductive Reasoning Capabilities and Problem Solving in Large Language Models  
-**Bowen Chen**, Rune Sætre, Yusuke Miyao at EACL Findings 2024  
-5. RIAND: Robustness-Improved and Accelerated Neural Deduplication  
-**Bowen Chen** IEEE SSCI 2025
-6. A Multi-Perspective Analysis of Memorization in Large Language Models  
-**Bowen Chen**, Namgi Han, Yusuke Miyao at EMNLP Main Conference 2024 
-7. A Statistical Revisiting the Member Inference Attack on Large Language Models  
-**Bowen Chen**, Namgi Han, Yusuke Miyao at ACL Main Conference 2025 
-8. OMS: On-the-fly, Multi-Objective, Self-Reflective Ad Keyword Generation via LLM Agent  
-**Bowen Chen**, Zhao Wang, Takamatsu Shingo at EMNLP Main Conference 2025  
-9. Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents  
-**Zhao Wang**, **Bowen Chen**, **Yotaro Shimose**, Sota Moriyama, Heng Wang, Shingo Takamatsu, EMNLP 2025 Industry Track
 
-### Journal
-1. Text Difficulty Study: Do machines behave the same as humans regarding text difficulty?   
-**Bowen Chen**, Xiao Ding, Yi Zhao, Bo Fu, Tingmao Lin, Bing Qin, Ting Liu at Machine Intellgience Research 2024 (Journal)  
-
-### Preprint & Under Review
-1. LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs  
-**LLM-jp Group**: I was responsible for the construction of evaluation tools and the investigation of the data contamination.  
-2. A Comparative Analysis of LLM Memorization at Statistical and Internal
-Levels: Cross-Model Commonalities and Model-Specific Signatures   
-**Bowen Chen**, Namgi Han, Yusuke Miyao  
-
-
-
-
-### Domestic Conference (Non Peer Reviewed)
-1. llm-jp-eval: 日本語大規模言語モデルの自動評価ツール  
-Namgi Han, 植田 暢大, 大嶽 匡俊, 勝又 智, 鎌田 啓輔, 清丸 寛一, 児玉 貴志, 菅原 朔, **Bowen Chen**, 松田 寛, 宮尾 祐介, 村脇 有吾, 劉 弘毅 at 言語処理学会2024
-2. オープン日本語LLMリーダーボードの構築と評価結果の分析  
-Namgi Han, 岡本, 拓己 石田 茂樹, 林 俊宏, Akim Mousterou, **Bowen Chen**, 宮尾 祐介  
-3. 大規模言語モデルにおけるIntruder Dimensionの発生傾向と分布に関する分析  
-豊井美雪, **陳 薄文**, 韓 南琦, 宮尾 祐介
-
-
+{% include publication-list.html items=site.data.publications.conference heading="Conference" id="conference" %}
+{% include publication-list.html items=site.data.publications.journal heading="Journal" id="journal" %}
+{% include publication-list.html items=site.data.publications.preprint heading="Preprint & Under Review" id="preprint" %}
+{% include publication-list.html items=site.data.publications.domestic heading="Domestic Conference (Non Peer Reviewed)" id="domestic" %}

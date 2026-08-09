@@ -1,0 +1,161 @@
+/* ==========================================================================
+   PUBLICATION LIST
+   Two-column rows: a year rail on the left, the entry on the right. The rail
+   collapses into an inline label below $medium so narrow screens keep the
+   title on one full-width line.
+   ========================================================================== */
+
+.pub-section {
+  margin: 0 0 2.75rem;
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.pub-section__heading {
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.4rem;
+  font-size: $type-size-4;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--heading);
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.pub-item {
+  display: grid;
+  grid-template-columns: 4.25rem 1fr;
+  gap: 0 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.pub-item__year {
+  font-variant-numeric: tabular-nums;
+  font-size: $type-size-6;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.9;
+  color: var(--text-faint);
+  text-align: right;
+}
+
+.pub-item__title {
+  margin: 0 0 0.3rem;
+  font-size: 1.02em;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--heading);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    background-image: linear-gradient(var(--link), var(--link));
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--link);
+      background-size: 100% 1px;
+    }
+  }
+}
+
+.pub-item__authors {
+  margin: 0;
+  font-size: 0.94em;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.pub-item__me {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.pub-item__note {
+  margin: 0.3rem 0 0;
+  font-size: 0.86em;
+  line-height: 1.5;
+  color: var(--text-faint);
+}
+
+.pub-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.pub-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 0.14rem 0.5rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 0.76em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.pub-badge__track,
+.pub-badge__year {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.pub-link {
+  display: inline-block;
+  padding: 0.14rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-muted);
+  font-size: 0.76em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--link);
+    border-color: var(--link);
+    background: var(--accent-soft);
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pub-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .pub-item__year {
+    text-align: left;
+    line-height: 1.4;
+    margin-bottom: 0.15rem;
+  }
+}

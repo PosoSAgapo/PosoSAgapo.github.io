@@ -19,5 +19,11 @@
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
+    {%- comment -%}
+      Kept outside .visible-links on purpose: greedy-nav collapses the last
+      visible <li> into the overflow menu first, which would swallow the toggle
+      on narrow viewports.
+    {%- endcomment -%}
+    {% include theme-toggle.html %}
   </div>
 </div>

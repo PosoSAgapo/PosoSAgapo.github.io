@@ -1,0 +1,89 @@
+{%- comment -%}
+  Renders one section of _data/publications.yml.
+
+  include.items    required, the list of entries
+  include.heading  required, section heading text
+  include.id       required, anchor/id slug
+{%- endcomment -%}
+
+{%- assign me = site.data.publications.me -%}
+{%- assign items = include.items | sort: "year" | reverse -%}
+
+<section class="pub-section" id="{{ include.id }}">
+  <h2 class="pub-section__heading">{{ include.heading }}</h2>
+
+  <ol class="pub-list">
+    {%- for item in items -%}
+      {%- comment -%}
+        Asterisks only make sense once the list actually carries a marked
+        author, so the footnote is emitted per entry rather than per section.
+      {%- endcomment -%}
+      <li class="pub-item">
+        {%- comment -%}
+          Not aria-hidden: since the year was dropped from the badge, the rail
+          is the only place it appears.
+        {%- endcomment -%}
+        <div class="pub-item__year">{{ item.year }}</div>
+
+        <div class="pub-item__body">
+          <h3 class="pub-item__title">
+            {%- if item.links.pdf -%}
+              <a href="{{ item.links.pdf }}">{{ item.title }}</a>
+            {%- elsif item.links.arxiv -%}
+              <a href="{{ item.links.arxiv }}">{{ item.title }}</a>
+            {%- elsif item.links.page -%}
+              <a href="{{ item.links.page }}">{{ item.title }}</a>
+            {%- else -%}
+              {{ item.title }}
+            {%- endif -%}
+          </h3>
+
+          <p class="pub-item__authors">
+            {%- for author in item.authors -%}
+              {%- assign is_me = false -%}
+              {%- for alias in me -%}
+                {%- if alias == author %}{% assign is_me = true %}{% endif -%}
+              {%- endfor -%}
+
+              {%- assign is_equal = false -%}
+              {%- for name in item.equal_contrib -%}
+                {%- if name == author %}{% assign is_equal = true %}{% endif -%}
+              {%- endfor -%}
+
+              {%- if is_me -%}
+                <span class="pub-item__me">{{ author }}{% if is_equal %}<sup>*</sup>{% endif %}</span>
+              {%- else -%}
+                <span>{{ author }}{% if is_equal %}<sup>*</sup>{% endif %}</span>
+              {%- endif -%}
+              {%- unless forloop.last %}, {% endunless -%}
+            {%- endfor -%}
+          </p>
+
+          {%- if item.note %}
+            <p class="pub-item__note">{{ item.note }}</p>
+          {%- endif -%}
+
+          {%- if item.equal_contrib %}
+            <p class="pub-item__note"><sup>*</sup> Equal contribution.</p>
+          {%- endif -%}
+
+          <div class="pub-item__meta">
+            {%- if item.venue %}
+              <span class="pub-badge">
+                {{ item.venue }}
+                {%- if item.track %} <span class="pub-badge__track">{{ item.track }}</span>{% endif -%}
+                {%- if item.year %} <span class="pub-badge__year">{{ item.year }}</span>{% endif -%}
+              </span>
+            {%- endif -%}
+
+            {%- for link in item.links -%}
+              {%- if link[1] and link[1] != "" %}
+                <a class="pub-link" href="{{ link[1] }}">{{ link[0] }}</a>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </li>
+    {%- endfor -%}
+  </ol>
+</section>

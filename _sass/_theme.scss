@@ -1,0 +1,485 @@
+/* ==========================================================================
+   THEME TOKENS + DARK MODE
+   --------------------------------------------------------------------------
+   Minimal Mistakes bakes its colours in at Sass-compile time, so there is no
+   way to re-theme it at runtime. This layer restates the handful of surfaces
+   that actually carry colour as CSS custom properties and then overrides the
+   upstream rules to read from them. Import it LAST so it wins on specificity
+   ties.
+
+   Three theme states have to work:
+     - explicit light   -> :root[data-theme="light"]
+     - explicit dark    -> :root[data-theme="dark"]
+     - system (default) -> no attribute, so only prefers-color-scheme applies
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  --bg: #f7f8f9;
+  --surface: #ffffff;
+  --surface-2: #eef0f2;
+  --surface-hover: #f2f4f6;
+
+  --text: #2c3e50;
+  --text-muted: #667586;
+  --text-faint: #8b97a4;
+  --heading: #1f2d3a;
+
+  --border: #e3e7ea;
+  --border-strong: #cfd6dc;
+
+  --link: #2a7fba;
+  --link-hover: #1b5c8a;
+
+  --accent: #3498db;
+  --accent-soft: rgba(52, 152, 219, 0.12);
+
+  --code-bg: #f4f5f7;
+  --shadow-sm: 0 1px 2px rgba(16, 24, 32, 0.06);
+  --shadow-md: 0 6px 18px rgba(16, 24, 32, 0.10);
+  --shadow-lg: 0 12px 30px rgba(16, 24, 32, 0.14);
+
+  --overlay-scrim: rgba(0, 0, 0, 0.35);
+}
+
+/* System preference, but never override an explicit light choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg: #14181d;
+    --surface: #1b2027;
+    --surface-2: #222831;
+    --surface-hover: #262d36;
+
+    --text: #d3dae1;
+    --text-muted: #93a0ad;
+    --text-faint: #75828f;
+    --heading: #e9eff5;
+
+    --border: #2b323b;
+    --border-strong: #3a434e;
+
+    --link: #6cb6ec;
+    --link-hover: #9bd0f5;
+
+    --accent: #5aa9e0;
+    --accent-soft: rgba(90, 169, 224, 0.16);
+
+    --code-bg: #161b21;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.55);
+
+    --overlay-scrim: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Explicit dark choice wins over a light system preference. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #14181d;
+  --surface: #1b2027;
+  --surface-2: #222831;
+  --surface-hover: #262d36;
+
+  --text: #d3dae1;
+  --text-muted: #93a0ad;
+  --text-faint: #75828f;
+  --heading: #e9eff5;
+
+  --border: #2b323b;
+  --border-strong: #3a434e;
+
+  --link: #6cb6ec;
+  --link-hover: #9bd0f5;
+
+  --accent: #5aa9e0;
+  --accent-soft: rgba(90, 169, 224, 0.16);
+
+  --code-bg: #161b21;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.55);
+
+  --overlay-scrim: rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Base surfaces
+   -------------------------------------------------------------------------- */
+
+/* body stops short of the viewport because the footer is absolutely
+   positioned against <html>; without this the root paints white behind the
+   gap and dark mode shows a bright band above the footer. */
+html {
+  background-color: var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title {
+  color: var(--heading);
+}
+
+a {
+  color: var(--link);
+
+  &:visited {
+    color: var(--link);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--link-hover);
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+blockquote {
+  border-left-color: var(--border-strong);
+  color: var(--text-muted);
+}
+
+code,
+pre,
+tt {
+  background-color: var(--code-bg);
+  color: var(--text);
+}
+
+figcaption,
+.page__meta,
+.archive__item-excerpt {
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Masthead
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.greedy-nav {
+  background: transparent;
+
+  a {
+    color: var(--text);
+
+    &:hover,
+    &:focus {
+      color: var(--link);
+    }
+  }
+
+  .visible-links a:before {
+    background: var(--accent);
+  }
+
+  button {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .hidden-links {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+
+    a {
+      color: var(--text);
+
+      &:hover {
+        color: var(--link-hover);
+        background: var(--surface-hover);
+      }
+    }
+
+    &:before {
+      border-color: var(--border) transparent;
+    }
+
+    &:after {
+      border-color: var(--surface) transparent;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar / author profile
+   -------------------------------------------------------------------------- */
+
+.author__name,
+.author__bio,
+.author__pronouns {
+  color: var(--text);
+}
+
+.author__urls-wrapper button {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+/* Below $large this list is a popover; at $large and up the theme flattens it
+   into the sidebar, so the surface treatment has to be unwound too. */
+.author__urls {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+
+  @include breakpoint($large) {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  &:before {
+    border-color: var(--border) transparent;
+  }
+
+  &:after {
+    border-color: var(--surface) transparent;
+  }
+
+  li {
+    color: var(--text);
+  }
+
+  a {
+    color: var(--text);
+
+    &:hover {
+      color: var(--link);
+    }
+  }
+
+  .fa,
+  .fas,
+  .far,
+  .fab,
+  .ai {
+    color: var(--text-faint);
+  }
+
+  a:hover .fa,
+  a:hover .fas,
+  a:hover .far,
+  a:hover .fab,
+  a:hover .ai {
+    color: var(--accent);
+  }
+}
+
+.sidebar .author__avatar img {
+  border-color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Page content surfaces
+   -------------------------------------------------------------------------- */
+
+.page__content {
+  h2,
+  h3 {
+    border-bottom-color: var(--border);
+  }
+}
+
+/* The card the single/album layout paints behind its content. Upstream hard-codes
+   #fff, which in dark mode leaves near-white text on a white card. */
+.page .page__inner-wrap {
+  background-color: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Same hard-coded-white problem, on surfaces that show up less often. */
+.toc,
+.modal {
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.page__footer {
+  background-color: var(--surface-2);
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+
+  a {
+    color: inherit;
+  }
+
+  .fas,
+  .fab,
+  .far,
+  .fal {
+    color: var(--text-muted);
+  }
+}
+
+.notice,
+.notice--primary,
+.notice--info,
+.notice--warning,
+.notice--success,
+.notice--danger {
+  background-color: var(--surface-2);
+  color: var(--text);
+}
+
+.pagination a {
+  color: var(--text);
+  border-color: var(--border);
+
+  &:hover {
+    background: var(--surface-hover);
+  }
+}
+
+/* Tables read as data, so give them real separators in both themes. */
+table {
+  color: var(--text);
+}
+
+th {
+  background-color: var(--surface-2);
+  border-bottom-color: var(--border-strong);
+  color: var(--heading);
+}
+
+td {
+  border-bottom-color: var(--border);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--surface-2);
+}
+
+/* --------------------------------------------------------------------------
+   Theme toggle button
+   -------------------------------------------------------------------------- */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Show exactly one glyph: sun while dark is active, moon while light is. */
+  .theme-toggle__moon {
+    display: block;
+  }
+
+  .theme-toggle__sun {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle {
+    .theme-toggle__moon {
+      display: none;
+    }
+
+    .theme-toggle__sun {
+      display: block;
+    }
+  }
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  .theme-toggle__moon {
+    display: none;
+  }
+
+  .theme-toggle__sun {
+    display: block;
+  }
+}
+
+:root[data-theme="light"] .theme-toggle {
+  .theme-toggle__moon {
+    display: block;
+  }
+
+  .theme-toggle__sun {
+    display: none;
+  }
+}
+
+/* Pinned to the right edge of the centred masthead container. The reserved
+   padding on .masthead__menu shrinks #site-nav, so greedy-nav's overflow
+   maths already accounts for the toggle and links never slide underneath. */
+.masthead__inner-wrap {
+  position: relative;
+}
+
+.masthead__menu {
+  padding-right: 3em;
+}
+
+.masthead .theme-toggle {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* --------------------------------------------------------------------------
+   Images: soften the harsh white of photos on a dark page without washing
+   out the light theme.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .page__content img:not(.author__avatar img) {
+    filter: brightness(0.92);
+  }
+}
+
+:root[data-theme="dark"] .page__content img:not(.author__avatar img) {
+  filter: brightness(0.92);
+}

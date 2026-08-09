@@ -1,0 +1,167 @@
+/* ==========================================================================
+   SITE LAYOUT OVERRIDES
+   Sidebar alignment, content measure, footer furniture.
+   ========================================================================== */
+
+/* Left-align the whole profile block (avatar included) once the sidebar sits
+   beside the content rather than above it. */
+@media screen and (min-width: 925px) {
+  .sidebar .author__avatar {
+    text-align: left !important;
+    margin-bottom: 1em !important;
+  }
+
+  .sidebar .author__avatar img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out !important;
+    cursor: pointer !important;
+  }
+
+  .sidebar .author__avatar img:hover {
+    transform: scale(1.04) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: var(--accent) !important;
+  }
+
+  .sidebar .author__content {
+    text-align: left !important;
+    padding: 0 !important;
+  }
+
+  .sidebar .author__name {
+    text-align: left !important;
+    margin: 0 0 5px 0 !important;
+  }
+
+  .sidebar .author__pronouns {
+    text-align: left !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+  .sidebar .author__bio {
+    text-align: left !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .sidebar .author__urls-wrapper {
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  .sidebar .author__urls {
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  .sidebar [itemscope] {
+    text-align: left !important;
+  }
+}
+
+/* Give the sidebar links a little breathing room and a clearer hover target. */
+.sidebar .author__urls li {
+  padding: 0.1rem 0;
+}
+
+.sidebar .author__urls a {
+  border-radius: 3px;
+  transition: color 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Content measure
+   Archive is the layout every page here uses, so this is the site's measure.
+   -------------------------------------------------------------------------- */
+
+/* Pages that deliberately have no heading (`title: ""`) still emit an <h1>,
+   which reserves its line-height and margin at the top of the content. */
+.page__title:empty {
+  display: none;
+}
+
+.archive {
+  margin-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 3em;
+  max-width: 900px;
+
+  @include breakpoint($medium) {
+    @include span(12 of 12);
+    padding-left: 3em;
+    padding-right: 2em;
+    max-width: 800px;
+  }
+
+  @include breakpoint($large) {
+    @include span(10 of 12 last);
+    @include prefix(0.5 of 12);
+    padding-left: 4em;
+    padding-right: 4em;
+    max-width: 1000px;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+
+      img {
+        box-shadow: var(--shadow-md);
+      }
+    }
+  }
+
+  /* The publication list draws its own affordances; the blanket underline
+     above would fight the title hover animation and the link buttons. */
+  .pub-item a,
+  .pub-section a {
+    text-decoration: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.footer-custom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.footer-left,
+.footer-right {
+  flex: 0 0 auto;
+}
+
+/* Visitor map widget (MapMyVisitors), pinned to the footer's right edge. */
+.visitor-map {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background: transparent;
+  border-radius: 3px;
+  padding: 2px;
+  box-shadow: none;
+  min-width: 200px;
+  min-height: 100px;
+  z-index: 10;
+}
+
+.visitor-map iframe,
+.visitor-map img,
+.visitor-map canvas,
+.visitor-map #mapmyvisitors-widget {
+  max-width: 100% !important;
+  min-width: 190px !important;
+}
+
+/* No room for it next to the footer text on small screens. */
+@media screen and (max-width: 768px) {
+  .visitor-map {
+    display: none;
+  }
+}
