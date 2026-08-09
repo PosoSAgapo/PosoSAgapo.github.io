@@ -43,7 +43,9 @@ $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 
 /* masthead properties */
-$masthead-height            : 50px;
+/* 50px left the nav and the theme toggle crammed against the bottom border;
+   also drives body's top padding, so both move together. */
+$masthead-height            : 60px;
 
 /*
    Colors

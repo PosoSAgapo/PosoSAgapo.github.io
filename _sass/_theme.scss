@@ -451,13 +451,25 @@ tbody tr:nth-child(even) {
   }
 }
 
-/* Pinned to the right edge of the centred masthead container. The reserved
-   padding on .masthead__menu shrinks #site-nav, so greedy-nav's overflow
-   maths already accounts for the toggle and links never slide underneath. */
-.masthead__inner-wrap {
-  position: relative;
+/* The masthead is a fixed-height bar, but .masthead__inner-wrap carries 1em of
+   vertical padding and so ends up taller than the bar itself. Anything centred
+   on the wrapper therefore hangs below the bar's bottom border. Drop the
+   wrapper's vertical padding and centre it inside the bar instead, so the nav
+   and the toggle both sit on the bar's own axis. */
+.masthead {
+  display: flex;
+  align-items: center;
 }
 
+.masthead__inner-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Reserved space for the toggle. This shrinks #site-nav, so greedy-nav's
+   overflow maths already accounts for it and links never slide underneath. */
 .masthead__menu {
   padding-right: 3em;
 }
