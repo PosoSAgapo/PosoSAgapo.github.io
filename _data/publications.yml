@@ -9,6 +9,8 @@
 #   track          optional qualifier appended to the badge, e.g. "Findings"
 #   year           used for the year rail and for sorting (newest first)
 #   note           free text shown under the authors
+#   selected       true to also list the entry under "Selected Publications"
+#                  on the homepage
 #   links          optional map of label -> url. Rendered as buttons in the
 #                  order given. Any label works; these read well:
 #                    pdf, arxiv, code, page, bib, video, poster
@@ -22,6 +24,13 @@ me:
   - 陳 薄文
 
 conference:
+  - title: "A Comparative Analysis of LLM Memorization at Statistical and Internal Levels: Cross-Model Commonalities and Model-Specific Signatures"
+    authors: [Bowen Chen, Namgi Han, Yusuke Miyao]
+    venue: EMNLP
+    track: Main Conference
+    year: 2026
+    selected: true
+
   - title: "Mirror in the Model: Ad Banner Image Generation via Reflective Multi-LLM and Multi-modal Agents"
     authors: [Zhao Wang, Bowen Chen, Yotaro Shimose, Sota Moriyama, Heng Wang, Shingo Takamatsu]
     venue: EMNLP
@@ -33,12 +42,14 @@ conference:
     venue: EMNLP
     track: Main Conference
     year: 2025
+    selected: true
 
   - title: "A Statistical Revisiting the Member Inference Attack on Large Language Models"
     authors: [Bowen Chen, Namgi Han, Yusuke Miyao]
     venue: ACL
     track: Main Conference
     year: 2025
+    selected: true
 
   - title: "RIAND: Robustness-Improved and Accelerated Neural Deduplication"
     authors: [Bowen Chen]
@@ -50,6 +61,7 @@ conference:
     venue: EMNLP
     track: Main Conference
     year: 2024
+    selected: true
 
   - title: "A Comprehensive Evaluation of Inductive Reasoning Capabilities and Problem Solving in Large Language Models"
     authors: [Bowen Chen, Rune Sætre, Yusuke Miyao]
@@ -81,11 +93,6 @@ journal:
     year: 2024
 
 preprint:
-  - title: "A Comparative Analysis of LLM Memorization at Statistical and Internal Levels: Cross-Model Commonalities and Model-Specific Signatures"
-    authors: [Bowen Chen, Namgi Han, Yusuke Miyao]
-    venue: arXiv
-    year: 2026
-
   - title: "LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs"
     authors: [LLM-jp Group]
     venue: arXiv
