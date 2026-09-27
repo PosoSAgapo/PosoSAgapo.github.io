@@ -1,27 +1,10 @@
 /* ==========================================================================
    HOMEPAGE
    Intro block and section spacing on _pages/about.md.
-   The selected-publications list reuses the .pub-* styles.
    ========================================================================== */
 
 .home-intro {
   margin: 0.5rem 0 2.75rem;
-}
-
-.home-intro__eyebrow {
-  margin: 0 0 0.4rem;
-  font-size: $type-size-6;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.home-intro__title {
-  margin: 0 0 0.75rem;
-  font-size: $type-size-2;
-  line-height: 1.2;
-  color: var(--heading);
 }
 
 .home-intro__lead {
@@ -75,10 +58,4 @@
 
 .home-section {
   margin: 0 0 2.75rem;
-}
-
-.home-more {
-  margin-top: -1.5rem;
-  text-align: right;
-  font-weight: 600;
 }

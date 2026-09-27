@@ -8,13 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-{%- assign pubs = site.data.publications -%}
-{%- assign all_pubs = pubs.conference | concat: pubs.journal | concat: pubs.preprint -%}
-{%- assign selected = all_pubs | where_exp: "p", "p.selected == true" -%}
-
 <section class="home-intro">
-  <p class="home-intro__eyebrow">Researcher · Sony Group Corporation</p>
-  <h1 class="home-intro__title">Hi, I'm Bowen Chen.</h1>
   <p class="home-intro__lead">
     I work on <strong>AI × Content Promotion</strong> at Sony Group Corporation.
     Previously, I obtained my Ph.D. from the Department of Computer Science at
@@ -40,7 +34,3 @@ redirect_from:
     Parsing and Cognitive Science × NLP.
   </p>
 </section>
-
-{% include publication-list.html items=selected heading="Selected Publications" id="selected" %}
-
-<p class="home-more"><a href="{{ '/publications/' | relative_url }}">All publications →</a></p>
