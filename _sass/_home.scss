@@ -1,6 +1,6 @@
 /* ==========================================================================
    HOMEPAGE
-   Intro block, research topic cards and the news list on _pages/about.md.
+   Intro block and section spacing on _pages/about.md.
    The selected-publications list reuses the .pub-* styles.
    ========================================================================== */
 
@@ -77,95 +77,8 @@
   margin: 0 0 2.75rem;
 }
 
-.home-topics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 0.9rem;
-  margin-top: 1rem;
-}
-
-.home-topic {
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--surface);
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-
-  &:hover {
-    border-color: var(--border-strong);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-  }
-}
-
-.home-topic__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.1rem;
-  height: 2.1rem;
-  margin-bottom: 0.6rem;
-  border-radius: 6px;
-  background: var(--accent-soft);
-  color: var(--accent);
-}
-
-.home-topic__title {
-  margin: 0 0 0.35rem;
-  font-size: 1em;
-  color: var(--heading);
-}
-
-.home-topic__text {
-  margin: 0;
-  font-size: 0.9em;
-  line-height: 1.55;
-  color: var(--text-muted);
-}
-
-.home-news {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  li {
-    display: grid;
-    grid-template-columns: 4.25rem 1fr;
-    gap: 0 1rem;
-    padding: 0.55rem 0;
-    border-bottom: 1px solid var(--border);
-    line-height: 1.6;
-
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
-}
-
-.home-news__date {
-  font-variant-numeric: tabular-nums;
-  font-size: $type-size-6;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 2.1;
-  color: var(--text-faint);
-  text-align: right;
-}
-
 .home-more {
   margin-top: -1.5rem;
   text-align: right;
   font-weight: 600;
-}
-
-@media screen and (max-width: 600px) {
-  .home-news li {
-    grid-template-columns: 1fr;
-  }
-
-  .home-news__date {
-    text-align: left;
-    line-height: 1.4;
-  }
 }
